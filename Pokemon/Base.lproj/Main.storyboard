@@ -38,6 +38,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="udW-wy-w3l" secondAttribute="trailing" id="rNm-D1-k39"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterSearchBar" destination="su9-aj-Bgt" id="hjh-nX-pBG"/>
+                        <outlet property="characterTableView" destination="udW-wy-w3l" id="tu2-wC-BH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

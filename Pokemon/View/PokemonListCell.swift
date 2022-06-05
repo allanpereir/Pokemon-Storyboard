@@ -9,15 +9,16 @@ import UIKit
 
 class PokemonListCell: UITableViewCell {
 
+    @IBOutlet weak var imageCharacter: UIImageView!
+    @IBOutlet weak var nameTextlabel: UILabel!
+    @IBOutlet weak var descriptionTextLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setUp(value: Pokemon){
+        self.nameTextlabel.text = value.name
     }
     
 }
