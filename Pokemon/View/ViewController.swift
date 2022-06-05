@@ -23,9 +23,6 @@ class ViewController: UIViewController {
         
         pokemonApi.getData { pokemon in
             self.characterTableView.reloadData()
-            for i in pokemon {
-                print(i.name)
-            }
         }
 
     }

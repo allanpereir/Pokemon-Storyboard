@@ -6,6 +6,7 @@ target 'Pokemon' do
   use_frameworks!
 
   # Pods for Pokemon
+    pod 'SDWebImage', '~> 5.0'
 
 
 end

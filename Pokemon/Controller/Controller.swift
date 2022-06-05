@@ -26,11 +26,10 @@ class PokemonApi {
                 completion(pokemonList.results)
             }
         }.resume()
-        
     }
-    func getPokemon(indexPath: IndexPath) -> Pokemon{
+    
+    func getPokemon(indexPath: IndexPath) -> Pokemon {
         return self.arrayPokemonCharacter[indexPath.row]
-        
     }
     
     func getCount() -> Int {
