@@ -35,5 +35,9 @@ class PokemonApi {
     func getCount() -> Int {
         return self.arrayPokemonCharacter.count
     }
+    
+    func getPokemonSelected(value: Int) -> Pokemon {
+        return self.arrayPokemonCharacter[value]
+    }
 }
 

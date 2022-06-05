@@ -18,6 +18,7 @@
 		BC042CF2284BBCE500849E1A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC042CF1284BBCE500849E1A /* Pokemon.swift */; };
 		BC042CF4284BBCF700849E1A /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC042CF3284BBCF700849E1A /* Controller.swift */; };
 		BC042CFE284BE12100849E1A /* PokemonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC042CFD284BE12100849E1A /* PokemonSelected.swift */; };
+		BC3F089A284D2F760045098A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F0899284D2F760045098A /* DetailViewController.swift */; };
 		C39D67EB3EC16E0A071ED480 /* Pods_Pokemon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD42673A79E79E3C3DC6D85 /* Pods_Pokemon.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		BC042CF1284BBCE500849E1A /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		BC042CF3284BBCF700849E1A /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		BC042CFD284BE12100849E1A /* PokemonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelected.swift; sourceTree = "<group>"; };
+		BC3F0899284D2F760045098A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DDF7373160F8AF2FC2B1421A /* Pods-Pokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.release.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				BC042CDA284B9F0400849E1A /* ViewController.swift */,
 				BC042CED284BAFA000849E1A /* PokemonListCell.swift */,
 				BC042CEE284BAFA000849E1A /* PokemonListCell.xib */,
+				BC3F0899284D2F760045098A /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				BC042CF4284BBCF700849E1A /* Controller.swift in Sources */,
 				BC042CD7284B9F0400849E1A /* AppDelegate.swift in Sources */,
 				BC042CD9284B9F0400849E1A /* SceneDelegate.swift in Sources */,
+				BC3F089A284D2F760045098A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

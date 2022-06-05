@@ -23,7 +23,6 @@ class PokemonListCell: UITableViewCell {
     }
     
     func setUp(value: Pokemon) {
-           
         self.nameTextlabel.text = value.name.capitalized
         imageLink = value.url
         

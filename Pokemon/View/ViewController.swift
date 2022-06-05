@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         pokemonApi.getData { pokemon in
             self.characterTableView.reloadData()
         }
-
     }
 }
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -38,6 +37,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell?.setUp(value: pokemonApi.getPokemon(indexPath: indexPath))
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let pokemon = pokemonApi.getPokemonSelected(value: indexPath.row)
+        print(pokemon.name.capitalized)
+        performSegue(withIdentifier: "DetailViewController", sender: pokemon)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailViewController: DetailViewController? = segue.destination as? DetailViewController
+        detailViewController?.pokemonSelected = sender as? Pokemon
     }
     
 }
