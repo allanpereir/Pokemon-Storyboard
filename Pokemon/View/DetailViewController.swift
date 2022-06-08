@@ -28,11 +28,13 @@ class DetailViewController: UIViewController {
     }
     func getPokemonImage(url: String) {
         var tempSprite: String?
-        
+
+        /*
         PokemonSelectedApi().getData(url: url) { sprite  in
             tempSprite = sprite.front_default
             self.imagePokemon.sd_setImage(with: URL(string: tempSprite ?? ""), completed: nil)
         }
+         */
     }
 
 }

@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct APICharacterData: Codable {
-    var count: Int
-    var next: String
-    var results: [Pokemon]
-}
-
 struct Pokemon: Codable {
     var name: String
     var url: String

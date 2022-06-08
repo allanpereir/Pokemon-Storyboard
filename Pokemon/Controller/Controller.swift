@@ -7,25 +7,45 @@
 
 import Foundation
 
-class PokemonApi {
+class Controller {
     
+    // MARK: Public Properties
     var arrayPokemonCharacter: [Pokemon] = []
+    var sprites: PokemonSprites?
     
-    func getData(completion: @escaping ([Pokemon]) -> ()) {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?limit=151") else {
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else { return }
-            
-            let pokemonList = try! JSONDecoder().decode(APICharacterData.self, from: data)
-            
-            DispatchQueue.main.async {
-                self.arrayPokemonCharacter = pokemonList.results
-                completion(pokemonList.results)
+    // MARK: Privete Properties
+    private let pokemonListWorker: PokemonListWorker
+    private let pokemonImageWorker: PokemonImageWorker
+   
+    
+    // MARK: Init
+    init(){
+        self.pokemonListWorker = PokemonListWorker()
+        self.pokemonImageWorker = PokemonImageWorker()
+    }
+    
+    func fetchPokemonList(completion: @escaping (Bool, Error?) ->Void){
+        pokemonListWorker.fetchPokemonList { [unowned self] result in
+            switch result {
+            case .success(let response):
+                arrayPokemonCharacter = response.results
+                completion(true, nil)
+            case .failure(_):
+                //exibir erro
+                break
             }
-        }.resume()
+        }
+    }
+    
+    func fetchPokemonImage(value: String, completion: @escaping (PokemonSprites, Error?) -> Void){
+        pokemonImageWorker.fetchPokemonImage(value: value) { [unowned self] result in
+            switch result {
+            case .success(let response):
+                 completion(response.sprites, nil)
+            case .failure(_):
+                break
+            }
+        }
     }
     
     func getPokemon(indexPath: IndexPath) -> Pokemon {
