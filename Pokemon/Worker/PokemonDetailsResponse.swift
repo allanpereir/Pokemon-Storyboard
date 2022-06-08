@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct PokemonImageResponse: Decodable {
+struct PokemonDetailsResponse: Decodable {
     
-    let sprites: PokemonSprites
+    let sprites: PokemonImage
+    let types: [PokemonType]
     
 }

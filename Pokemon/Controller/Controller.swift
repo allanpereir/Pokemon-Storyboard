@@ -11,17 +11,19 @@ class Controller {
     
     // MARK: Public Properties
     var arrayPokemonCharacter: [Pokemon] = []
-    var sprites: PokemonSprites?
+    var arrayFilteredPokemonCharacter: [Pokemon] = []
+    
+    var sprites: PokemonImage?
     
     // MARK: Privete Properties
     private let pokemonListWorker: PokemonListWorker
-    private let pokemonImageWorker: PokemonImageWorker
+    private let pokemonDetailsWorker: PokemonDetailsWorker
    
     
     // MARK: Init
     init(){
         self.pokemonListWorker = PokemonListWorker()
-        self.pokemonImageWorker = PokemonImageWorker()
+        self.pokemonDetailsWorker = PokemonDetailsWorker()
     }
     
     func fetchPokemonList(completion: @escaping (Bool, Error?) ->Void){
@@ -29,6 +31,7 @@ class Controller {
             switch result {
             case .success(let response):
                 arrayPokemonCharacter = response.results
+                arrayFilteredPokemonCharacter = arrayPokemonCharacter
                 completion(true, nil)
             case .failure(_):
                 //exibir erro
@@ -37,11 +40,21 @@ class Controller {
         }
     }
     
-    func fetchPokemonImage(value: String, completion: @escaping (PokemonSprites, Error?) -> Void){
-        pokemonImageWorker.fetchPokemonImage(value: value) { [unowned self] result in
+    func getFilteredPokemonList (searchText: String) {
+        
+        if searchText == "" {
+            print("Entrei")
+            arrayFilteredPokemonCharacter = arrayPokemonCharacter
+        }else {
+            arrayFilteredPokemonCharacter = arrayPokemonCharacter.filter { user -> Bool in return user.name.capitalized.contains(searchText)}
+        }
+    }
+    
+    func fetchPokemonDetails(value: String, completion: @escaping (PokemonDetailsResponse, Error?) -> Void){
+        pokemonDetailsWorker.fetchPokemonDetails(value: value) { [unowned self] result in
             switch result {
             case .success(let response):
-                 completion(response.sprites, nil)
+                completion(response, nil)
             case .failure(_):
                 break
             }
@@ -49,15 +62,15 @@ class Controller {
     }
     
     func getPokemon(indexPath: IndexPath) -> Pokemon {
-        return self.arrayPokemonCharacter[indexPath.row]
+        return self.arrayFilteredPokemonCharacter[indexPath.row]
     }
     
     func getCount() -> Int {
-        return self.arrayPokemonCharacter.count
+        return self.arrayFilteredPokemonCharacter.count
     }
     
     func getPokemonSelected(value: Int) -> Pokemon {
-        return self.arrayPokemonCharacter[value]
+        return self.arrayFilteredPokemonCharacter[value]
     }
 }
 

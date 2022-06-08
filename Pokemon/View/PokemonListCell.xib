@@ -20,32 +20,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEX-uk-UaT">
-                                <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                <rect key="frame" x="10" y="10" width="130" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="6Yd-Jj-scJ"/>
-                                    <constraint firstAttribute="width" constant="100" id="VZr-Tz-xq4"/>
+                                    <constraint firstAttribute="height" constant="130" id="6Yd-Jj-scJ"/>
+                                    <constraint firstAttribute="width" constant="130" id="VZr-Tz-xq4"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuN-Cm-56W">
-                                <rect key="frame" x="120" y="10" width="42" height="21"/>
+                                <rect key="frame" x="150" y="10" width="51.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X33-N5-R0e">
+                                <rect key="frame" x="150" y="40" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X33-N5-R0e">
-                                <rect key="frame" x="120" y="37" width="200" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grama" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdv-BU-tj7">
+                                <rect key="frame" x="197" y="40" width="54" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cdv-BU-tj7" firstAttribute="top" secondItem="X33-N5-R0e" secondAttribute="top" id="BqG-cf-La7"/>
                             <constraint firstAttribute="height" constant="150" id="ELl-br-Qd9"/>
                             <constraint firstItem="cuN-Cm-56W" firstAttribute="leading" secondItem="lEX-uk-UaT" secondAttribute="trailing" constant="10" id="FLF-O2-JkR"/>
                             <constraint firstItem="X33-N5-R0e" firstAttribute="leading" secondItem="lEX-uk-UaT" secondAttribute="trailing" constant="10" id="HEJ-Tz-CSI"/>
                             <constraint firstItem="X33-N5-R0e" firstAttribute="top" secondItem="cuN-Cm-56W" secondAttribute="bottom" constant="6" id="I1f-4x-0hE"/>
-                            <constraint firstAttribute="trailing" secondItem="X33-N5-R0e" secondAttribute="trailing" id="Nfu-pU-C2a"/>
+                            <constraint firstItem="cdv-BU-tj7" firstAttribute="leading" secondItem="X33-N5-R0e" secondAttribute="trailing" constant="5" id="NWR-0J-ioN"/>
                             <constraint firstItem="lEX-uk-UaT" firstAttribute="top" secondItem="7a0-Jy-4ud" secondAttribute="top" constant="10" id="SXQ-5P-gAy"/>
                             <constraint firstItem="lEX-uk-UaT" firstAttribute="leading" secondItem="7a0-Jy-4ud" secondAttribute="leading" constant="10" id="Zdv-qw-57P"/>
                             <constraint firstItem="cuN-Cm-56W" firstAttribute="top" secondItem="lEX-uk-UaT" secondAttribute="top" id="fQg-km-Evy"/>
@@ -65,6 +72,7 @@
                 <outlet property="descriptionTextLabel" destination="X33-N5-R0e" id="5Hb-20-LaP"/>
                 <outlet property="imageCharacter" destination="lEX-uk-UaT" id="dJ2-X5-Xcg"/>
                 <outlet property="nameTextlabel" destination="cuN-Cm-56W" id="lMZ-LZ-LzH"/>
+                <outlet property="typeTextLabel" destination="cdv-BU-tj7" id="AC4-MJ-QEO"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="127.56696428571428"/>
         </tableViewCell>

@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         
         self.characterTableView.dataSource = self
         self.characterTableView.delegate = self
+        self.characterSearchBar.delegate = self
+        
         self.characterTableView.register(UINib(nibName: "PokemonListCell", bundle: nil), forCellReuseIdentifier: "PokemonListCell")
         
         controller.fetchPokemonList { pokemon, error in
@@ -50,7 +52,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let detailViewController: DetailViewController? = segue.destination as? DetailViewController
         detailViewController?.pokemonSelected = sender as? Pokemon
     }
+}
+extension ViewController: UISearchBarDelegate {
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        
+            controller.getFilteredPokemonList(searchText: characterSearchBar.text!)
+            self.characterTableView.reloadData()
+
+    }
 }
 
 
