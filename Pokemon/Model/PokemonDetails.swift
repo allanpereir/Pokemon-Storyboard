@@ -10,6 +10,8 @@ import Foundation
 struct PokemonDetails: Codable {
     var PokemonImages: PokemonImage
     var PokemonTypes: PokemonType
+    var PokemonAbilities: PokemonAbility
+    
 }
 
 struct PokemonImage: Codable {
@@ -24,6 +26,17 @@ struct type: Codable {
     var name: String
     var url: String
 }
+struct PokemonAbility: Codable {
+    var ability: Ability
+}
+struct Ability: Codable {
+    var name: String
+    var url: String
+}
+
+
+
+
 
 
 

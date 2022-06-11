@@ -10,7 +10,9 @@ import Foundation
 typealias PokemonListResult = (Result<PokemonListResponse, PokemonError>) -> Void
 
 protocol PokemonWorkerProtocol {
+    
     func fetchPokemonList(completion: @escaping PokemonListResult)
+    
 }
 
 class PokemonListWorker: PokemonWorkerProtocol {

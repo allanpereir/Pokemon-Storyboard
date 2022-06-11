@@ -18,13 +18,16 @@ class Controller {
     // MARK: Privete Properties
     private let pokemonListWorker: PokemonListWorker
     private let pokemonDetailsWorker: PokemonDetailsWorker
-   
+    private let pokemonAbilitiesWorker: PokemonAbilitiesWorker
+    
     
     // MARK: Init
     init(){
-        self.pokemonListWorker = PokemonListWorker()
+        self.pokemonListWorker    = PokemonListWorker()
         self.pokemonDetailsWorker = PokemonDetailsWorker()
+        self.pokemonAbilitiesWorker = PokemonAbilitiesWorker()
     }
+    
     
     func fetchPokemonList(completion: @escaping (Bool, Error?) ->Void){
         pokemonListWorker.fetchPokemonList { [unowned self] result in
@@ -39,16 +42,28 @@ class Controller {
             }
         }
     }
+
     
     func getFilteredPokemonList (searchText: String) {
         
         if searchText == "" {
-            print("Entrei")
             arrayFilteredPokemonCharacter = arrayPokemonCharacter
         }else {
             arrayFilteredPokemonCharacter = arrayPokemonCharacter.filter { user -> Bool in return user.name.capitalized.contains(searchText)}
         }
     }
+    
+    func fetchPokemonAbility(value: String, completion: @escaping (PokemonAbilitiesResponse, Error?) -> Void){
+        pokemonAbilitiesWorker.fetchPokemonAbility(value: value) { [unowned self] result in
+            switch result {
+            case .success(let response):
+                completion(response, nil)
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     
     func fetchPokemonDetails(value: String, completion: @escaping (PokemonDetailsResponse, Error?) -> Void){
         pokemonDetailsWorker.fetchPokemonDetails(value: value) { [unowned self] result in
@@ -72,5 +87,6 @@ class Controller {
     func getPokemonSelected(value: Int) -> Pokemon {
         return self.arrayFilteredPokemonCharacter[value]
     }
+    
 }
 

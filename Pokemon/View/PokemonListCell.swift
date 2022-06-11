@@ -14,6 +14,7 @@ class PokemonListCell: UITableViewCell {
     @IBOutlet weak var nameTextlabel: UILabel!
     @IBOutlet weak var descriptionTextLabel: UILabel!
     @IBOutlet weak var typeTextLabel: UILabel!
+    @IBOutlet weak var levelTextLabel: UILabel!
     
     var imageLink = ""
     var pokemonSprite = ""
@@ -25,8 +26,6 @@ class PokemonListCell: UITableViewCell {
     
     func setUp(value: Pokemon) {
         self.nameTextlabel.text = value.name.capitalized
-        imageLink = value.url
-        
         
         Controller().fetchPokemonDetails(value: value.url) { Pokemon, error in
             self.imageCharacter.sd_setImage(with: URL(string: Pokemon.sprites.front_default ?? ""), completed: nil)
@@ -40,6 +39,7 @@ class PokemonListCell: UITableViewCell {
                 }
             }
             self.typeTextLabel.text = type.capitalized
+            self.levelTextLabel.text = String(Pokemon.base_experience ?? 0)
             
         }
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct PokemonAPI {
-    static let baseURL: String = "https://pokeapi.co/api/v2/pokemon/?limit=2000"
+    static let baseURL: String = "https://pokeapi.co/api/v2/pokemon/?limit=1000"
 
     static func buildList() -> String {
         return baseURL

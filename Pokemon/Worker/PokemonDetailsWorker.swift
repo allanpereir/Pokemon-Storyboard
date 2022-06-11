@@ -19,9 +19,8 @@ class PokemonDetailsWorker: PokemonDetailsWorkerProtocol {
     
     func fetchPokemonDetails(value: String, completion: @escaping PokemonDetailsResult) {
         let url = value
-        
-        NetWorkManager.request(url: url) { result in
-            completion(result)
+        NetWorkManager.request(url: url) { result in completion(result)
+            
         }
     }
 }

@@ -56,11 +56,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 extension ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        
             controller.getFilteredPokemonList(searchText: characterSearchBar.text!)
             self.characterTableView.reloadData()
-
     }
 }
 

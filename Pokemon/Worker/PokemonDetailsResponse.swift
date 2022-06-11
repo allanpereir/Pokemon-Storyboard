@@ -11,5 +11,7 @@ struct PokemonDetailsResponse: Decodable {
     
     let sprites: PokemonImage
     let types: [PokemonType]
-    
+    let base_experience: Int?
+    let abilities: [PokemonAbility]
+
 }
