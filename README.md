@@ -1,10 +1,11 @@
 # Pokemon-Storyboard - iOS
+O Pokemon-Storyboard é um app Pokedex, para listar todos os pokemons com suas respectivas caracterisitcas, implementado em Swift com arquitetura MVC.
+
+<img src="https://user-images.githubusercontent.com/58039168/173194975-070062df-cfa0-46cb-a2f5-e1c6caef9060.png" alt="drawing" width="150"/> <img src="https://user-images.githubusercontent.com/58039168/173195078-e90cfc5d-504b-4927-910c-28f5218ab0c2.png" alt="drawing" width="150"/> <img src="https://user-images.githubusercontent.com/58039168/173195114-12907f6c-975e-4f9d-bd79-acbe968880d6.png" alt="drawing" width="150"/>
 
 
-<img src="https://user-images.githubusercontent.com/58039168/172068247-27a420d9-f71b-47da-9cdd-abe13e86d65b.png" alt="drawing" width="150"/>
+https://user-images.githubusercontent.com/58039168/173195656-b2acd6ee-aa91-406c-a5b3-980b941972d7.mp4
 
-
-O Pokemon-Storyboard é um app Pokedex, para listar todos os pokemons com suas respectivas caracterisitcas e com a funcionalidade de criar sua lista de pokemons favoritos, implementado em Swift com arquitetura MVC.
 
 
 # Funcionalidades
@@ -12,9 +13,9 @@ O Pokemon-Storyboard é um app Pokedex, para listar todos os pokemons com suas r
 - Linguagem: Swift 5
 - Arquitetura: MVC
 - Integração com API https://pokeapi.co/
-- Firebase para armazenar os Pokemons Favoritos
-- Menu Favoritos - para adicionar os favoritos
-- Menu Principal - para listar os Pokemons
+- Workers para consumir APIs utilizando Generic Codable
+- Uso de TableView
+- Uso de Collection
 - Cocoapod SDWebImage para imagens
 
 
@@ -24,3 +25,4 @@ O Pokemon-Storyboard é um app Pokedex, para listar todos os pokemons com suas r
 2. Instale o [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)
 3. Rode `pod install` para instalar as dependências do projeto
 4. Faça um build e rode o projeto ▶️
+
