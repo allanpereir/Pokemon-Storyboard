@@ -4,21 +4,20 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="KGk-i7-Jjw" customClass="AbilityCustomCell" customModule="Pokemon" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="162"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="351" id="KGk-i7-Jjw" customClass="AbilityCustomCell" customModule="Pokemon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="341"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="162"/>
+                <rect key="frame" x="0.0" y="0.0" width="302" height="341"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwb-Kx-hrg">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="162"/>
+                        <rect key="frame" x="0.0" y="0.0" width="302" height="341"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKH-9D-3dc">
                                 <rect key="frame" x="5" y="5" width="60.5" height="24"/>
@@ -28,10 +27,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwe-cm-Qfg">
-                                <rect key="frame" x="5" y="34" width="290" height="71.5"/>
+                                <rect key="frame" x="5" y="34" width="292" height="36"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Decriptionasadaasdaasdasdsdasdaasadasdasdasaadadsasadadadadaddasdassaddsadasdasdadadasdasdasdadasdasdasdasdadasdasdasdasdasdad">
+                                    <fragment content="Decriptionasadaasdaasdasdsdasdaasadasdasdasaadadsasadadadada">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -40,13 +39,47 @@
                                     </fragment>
                                 </attributedString>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aWk-qS-i1E">
+                                <rect key="frame" x="0.0" y="90" width="302" height="241"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemons with the same Ability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abW-Vg-Kbk">
+                                        <rect key="frame" x="0.0" y="0.0" width="302" height="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yGf-iq-r9N">
+                                        <rect key="frame" x="0.0" y="17" width="302" height="224"/>
+                                        <color key="backgroundColor" red="0.097975142299999998" green="0.097995899619999993" blue="0.097970627249999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="arw-Ve-WNR">
+                                            <size key="itemSize" width="150" height="150"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="abW-Vg-Kbk" secondAttribute="trailing" id="3i9-V8-Lea"/>
+                                    <constraint firstItem="yGf-iq-r9N" firstAttribute="leading" secondItem="aWk-qS-i1E" secondAttribute="leading" id="5Sa-xC-eT4"/>
+                                    <constraint firstAttribute="bottom" secondItem="yGf-iq-r9N" secondAttribute="bottom" id="7MF-Ur-5Y7"/>
+                                    <constraint firstAttribute="trailing" secondItem="yGf-iq-r9N" secondAttribute="trailing" id="9KF-86-p5P"/>
+                                    <constraint firstItem="abW-Vg-Kbk" firstAttribute="leading" secondItem="aWk-qS-i1E" secondAttribute="leading" id="DxB-RW-pf0"/>
+                                    <constraint firstItem="yGf-iq-r9N" firstAttribute="top" secondItem="abW-Vg-Kbk" secondAttribute="bottom" id="nSu-QN-hf1"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" red="0.097975142299999998" green="0.097995899619999993" blue="0.097970627249999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aWk-qS-i1E" secondAttribute="trailing" id="6fe-lv-L0I"/>
+                            <constraint firstItem="aWk-qS-i1E" firstAttribute="top" secondItem="Hwe-cm-Qfg" secondAttribute="bottom" constant="20" id="SPh-an-r3D"/>
                             <constraint firstItem="Hwe-cm-Qfg" firstAttribute="top" secondItem="FKH-9D-3dc" secondAttribute="bottom" constant="5" id="WWW-v5-Gho"/>
                             <constraint firstItem="FKH-9D-3dc" firstAttribute="top" secondItem="Xwb-Kx-hrg" secondAttribute="top" constant="5" id="d1E-xU-eD3"/>
+                            <constraint firstItem="aWk-qS-i1E" firstAttribute="leading" secondItem="Xwb-Kx-hrg" secondAttribute="leading" id="oSn-DI-Gjd"/>
                             <constraint firstItem="FKH-9D-3dc" firstAttribute="leading" secondItem="Xwb-Kx-hrg" secondAttribute="leading" constant="5" id="pu3-Wk-FDv"/>
+                            <constraint firstAttribute="bottom" secondItem="aWk-qS-i1E" secondAttribute="bottom" constant="10" id="seu-Av-AhA"/>
                             <constraint firstAttribute="trailing" secondItem="Hwe-cm-Qfg" secondAttribute="trailing" constant="5" id="uov-MZ-2rk"/>
                             <constraint firstItem="Hwe-cm-Qfg" firstAttribute="leading" secondItem="Xwb-Kx-hrg" secondAttribute="leading" constant="5" id="zIg-El-gXs"/>
                         </constraints>
@@ -65,13 +98,9 @@
             <connections>
                 <outlet property="abilityNameTextLabel" destination="FKH-9D-3dc" id="HWG-eg-2I4"/>
                 <outlet property="descTextLabel" destination="Hwe-cm-Qfg" id="hRu-MJ-hlb"/>
+                <outlet property="pokemonCollection" destination="yGf-iq-r9N" id="jix-eg-9U0"/>
             </connections>
-            <point key="canvasLocation" x="8.6956521739130448" y="4.6875"/>
+            <point key="canvasLocation" x="10.144927536231885" y="64.620535714285708"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

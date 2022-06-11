@@ -10,5 +10,6 @@ import Foundation
 struct PokemonAbilitiesResponse: Decodable {
     
     let effect_entries: [PokemonAbilities]
+    let pokemon: [PokemonSameAbitity]
     
 }

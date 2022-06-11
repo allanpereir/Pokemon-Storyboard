@@ -20,6 +20,15 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.imagePokemon.backgroundColor = #colorLiteral(red: 0.0979751423, green: 0.09799589962, blue: 0.09797062725, alpha: 1)
+        self.imagePokemon.layer.cornerRadius = 0.45 * self.imagePokemon.bounds.size.width
+        self.imagePokemon.layer.borderColor = UIColor.darkGray.cgColor
+        self.imagePokemon.layer.borderWidth = 5
+        
+        //self.layer.cornerRadius = 0.3 * self.bounds.size.width
+        //self.clipsToBounds = true
+        //self.layer.borderColor = UIColor.purple.cgColor
+        //self.layer.borderWidth = 1.9
         self.abilityTableView.delegate = self
         self.abilityTableView.dataSource = self
         self.abilityTableView.register(UINib(nibName: "AbilityCustomCell", bundle: nil), forCellReuseIdentifier: "AbilityCustomCell")

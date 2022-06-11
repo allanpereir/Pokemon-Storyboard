@@ -15,3 +15,12 @@ struct PokemonAbilities: Codable {
 struct Language: Codable {
     var name: String
 }
+
+struct PokemonSameAbitity: Codable {
+    var pokemon: Pokemons
+}
+
+struct Pokemons: Codable {
+    var name: String
+    var url: String
+}
