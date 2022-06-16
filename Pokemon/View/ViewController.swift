@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         self.characterTableView.delegate = self
         self.characterSearchBar.delegate = self
         
-        self.characterTableView.register(UINib(nibName: "PokemonListCell", bundle: nil), forCellReuseIdentifier: "PokemonListCell")
+        self.characterTableView.register(UINib(nibName: K.pokemonListCell, bundle: nil), forCellReuseIdentifier: K.pokemonListCell)
         
         controller.fetchPokemonList { pokemon, error in
             self.characterTableView.reloadData()
@@ -35,7 +35,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: PokemonListCell? = characterTableView.dequeueReusableCell(withIdentifier: "PokemonListCell", for: indexPath) as! PokemonListCell
+        let cell: PokemonListCell? = characterTableView.dequeueReusableCell(withIdentifier: K.pokemonListCell, for: indexPath) as! PokemonListCell
         
         cell?.setUp(value: controller.getPokemon(indexPath: indexPath))
         return cell ?? UITableViewCell()
@@ -44,7 +44,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let pokemon = controller.getPokemonSelected(value: indexPath.row)
-        performSegue(withIdentifier: "DetailViewController", sender: pokemon)
+        performSegue(withIdentifier: K.detailViewController, sender: pokemon)
         
     }
     

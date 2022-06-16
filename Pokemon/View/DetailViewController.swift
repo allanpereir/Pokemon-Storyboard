@@ -24,14 +24,9 @@ class DetailViewController: UIViewController {
         self.imagePokemon.layer.cornerRadius = 0.45 * self.imagePokemon.bounds.size.width
         self.imagePokemon.layer.borderColor = UIColor.darkGray.cgColor
         self.imagePokemon.layer.borderWidth = 5
-        
-        //self.layer.cornerRadius = 0.3 * self.bounds.size.width
-        //self.clipsToBounds = true
-        //self.layer.borderColor = UIColor.purple.cgColor
-        //self.layer.borderWidth = 1.9
         self.abilityTableView.delegate = self
         self.abilityTableView.dataSource = self
-        self.abilityTableView.register(UINib(nibName: "AbilityCustomCell", bundle: nil), forCellReuseIdentifier: "AbilityCustomCell")
+        self.abilityTableView.register(UINib(nibName: K.abilityCustomCell, bundle: nil), forCellReuseIdentifier: K.abilityCustomCell)
         
         let imageLink = pokemonSelected?.url
         
@@ -61,7 +56,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: AbilityCustomCell? = abilityTableView.dequeueReusableCell(withIdentifier: "AbilityCustomCell", for: indexPath) as? AbilityCustomCell
+        let cell: AbilityCustomCell? = abilityTableView.dequeueReusableCell(withIdentifier: K.abilityCustomCell, for: indexPath) as? AbilityCustomCell
         cell?.setUp(value: pokemonDetails?.abilities[indexPath.row].ability ?? Ability.init(name: "", url: ""))
         return cell ?? UITableViewCell()
     }

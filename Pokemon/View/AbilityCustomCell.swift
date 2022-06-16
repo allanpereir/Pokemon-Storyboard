@@ -17,7 +17,6 @@ class AbilityCustomCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,7 +24,7 @@ class AbilityCustomCell: UITableViewCell {
         
         self.pokemonCollection.delegate = self
         self.pokemonCollection.dataSource =  self
-        self.pokemonCollection.register(UINib(nibName: "PokemonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PokemonCollectionViewCell")
+        self.pokemonCollection.register(UINib(nibName: K.pokemonCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: K.pokemonCollectionViewCell)
     }
     
     func setUp (value: Ability) {
@@ -54,7 +53,7 @@ extension AbilityCustomCell: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collection: PokemonCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: "PokemonCollectionViewCell", for: indexPath) as? PokemonCollectionViewCell
+        let collection: PokemonCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: K.pokemonCollectionViewCell, for: indexPath) as? PokemonCollectionViewCell
         collection?.setup(value: pokemonSameAbility[indexPath.row].pokemon)
         return collection ?? UICollectionViewCell()
     }

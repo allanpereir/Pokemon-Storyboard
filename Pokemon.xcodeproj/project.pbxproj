@@ -28,6 +28,7 @@
 		BC213C44285425DC0050E801 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC213C42285425DC0050E801 /* PokemonCollectionViewCell.swift */; };
 		BC213C45285425DC0050E801 /* PokemonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC213C43285425DC0050E801 /* PokemonCollectionViewCell.xib */; };
 		BC3F089A284D2F760045098A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F0899284D2F760045098A /* DetailViewController.swift */; };
+		BC60498F285B73D7009B86BD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60498E285B73D7009B86BD /* K.swift */; };
 		BCDBABD4285139C2000CDCDB /* AbilityCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBABD2285139C2000CDCDB /* AbilityCustomCell.swift */; };
 		BCDBABD5285139C2000CDCDB /* AbilityCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCDBABD3285139C2000CDCDB /* AbilityCustomCell.xib */; };
 		BCDBABD92851546C000CDCDB /* PokemonAbilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBABD82851546C000CDCDB /* PokemonAbilities.swift */; };
@@ -62,6 +63,7 @@
 		BC213C42285425DC0050E801 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC213C43285425DC0050E801 /* PokemonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC3F0899284D2F760045098A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BC60498E285B73D7009B86BD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		BCDBABD2285139C2000CDCDB /* AbilityCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityCustomCell.swift; sourceTree = "<group>"; };
 		BCDBABD3285139C2000CDCDB /* AbilityCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AbilityCustomCell.xib; sourceTree = "<group>"; };
 		BCDBABD82851546C000CDCDB /* PokemonAbilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAbilities.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				BC08901C2850088B00E44B95 /* PokemonError.swift */,
+				BC60498E285B73D7009B86BD /* K.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				BCDBABDD285154EF000CDCDB /* PokemonAbilitiesResponse.swift in Sources */,
 				BCDBABD4285139C2000CDCDB /* AbilityCustomCell.swift in Sources */,
 				BC0890262850193000E44B95 /* PokemonDetailsWorker.swift in Sources */,
+				BC60498F285B73D7009B86BD /* K.swift in Sources */,
 				BC042CD9284B9F0400849E1A /* SceneDelegate.swift in Sources */,
 				BC3F089A284D2F760045098A /* DetailViewController.swift in Sources */,
 				BCDBABDB285154CF000CDCDB /* PokemonAbilitiesWorker.swift in Sources */,
